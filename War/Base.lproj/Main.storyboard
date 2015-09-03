@@ -30,14 +30,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gG4-ht-VcY" userLabel="SecondCardImage">
                                         <rect key="frame" x="66" y="56" width="120" height="170"/>
                                         <color key="backgroundColor" red="0.10438960435468425" green="0.67729353396633463" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Gsd-EZ-Oz8"/>
-                                            <constraint firstAttribute="height" constant="170" id="aky-pt-OJj"/>
-                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.48234779895257629" green="0.80101335938488982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="gG4-ht-VcY" firstAttribute="width" secondItem="rEp-Id-2yr" secondAttribute="width" id="1Pk-tH-1Vb"/>
+                                    <constraint firstItem="gG4-ht-VcY" firstAttribute="height" secondItem="rEp-Id-2yr" secondAttribute="height" id="2ka-yj-Kqt"/>
                                     <constraint firstItem="rEp-Id-2yr" firstAttribute="leading" secondItem="E1W-X8-ycF" secondAttribute="leading" id="FQY-IT-v7h"/>
                                     <constraint firstAttribute="trailing" secondItem="gG4-ht-VcY" secondAttribute="trailing" id="NoN-bd-brW"/>
                                     <constraint firstItem="gG4-ht-VcY" firstAttribute="top" secondItem="E1W-X8-ycF" secondAttribute="top" id="O5Q-pn-RAd"/>
@@ -48,15 +46,6 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="rEp-Id-2yr"/>
-                                        <exclude reference="gG4-ht-VcY"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="cN7-8s-XJK"/>
-                                        <exclude reference="tZF-pl-ZrE"/>
-                                        <exclude reference="NoN-bd-brW"/>
-                                        <exclude reference="O5Q-pn-RAd"/>
-                                        <exclude reference="FQY-IT-v7h"/>
-                                        <exclude reference="v3b-NN-Tsu"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -67,10 +56,28 @@
                                     <mask key="constraints">
                                         <include reference="cN7-8s-XJK"/>
                                         <include reference="tZF-pl-ZrE"/>
-                                        <include reference="NoN-bd-brW"/>
-                                        <include reference="O5Q-pn-RAd"/>
                                         <include reference="FQY-IT-v7h"/>
                                         <include reference="v3b-NN-Tsu"/>
+                                        <include reference="1Pk-tH-1Vb"/>
+                                        <include reference="2ka-yj-Kqt"/>
+                                        <include reference="NoN-bd-brW"/>
+                                        <include reference="O5Q-pn-RAd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="rEp-Id-2yr"/>
+                                        <include reference="gG4-ht-VcY"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="cN7-8s-XJK"/>
+                                        <include reference="tZF-pl-ZrE"/>
+                                        <include reference="FQY-IT-v7h"/>
+                                        <include reference="v3b-NN-Tsu"/>
+                                        <include reference="1Pk-tH-1Vb"/>
+                                        <include reference="2ka-yj-Kqt"/>
+                                        <include reference="NoN-bd-brW"/>
+                                        <include reference="O5Q-pn-RAd"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -84,12 +91,17 @@
                             <mask key="subviews">
                                 <exclude reference="E1W-X8-ycF"/>
                             </mask>
-                            <mask key="constraints">
-                                <exclude reference="Uns-lL-0n8"/>
-                                <exclude reference="zyh-Fh-Ry4"/>
-                            </mask>
                         </variation>
                         <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="E1W-X8-ycF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Uns-lL-0n8"/>
+                                <include reference="zyh-Fh-Ry4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="E1W-X8-ycF"/>
                             </mask>
