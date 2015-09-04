@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,6 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-jX-Mit" userLabel="BackgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-BR-cLs" userLabel="PlayButtonContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-CJ-d3V">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Play Round">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="wr4-CJ-d3V" secondAttribute="centerY" id="O4u-Zr-lgb"/>
+                                    <constraint firstAttribute="centerX" secondItem="wr4-CJ-d3V" secondAttribute="centerX" id="sxx-RR-H4U"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="wr4-CJ-d3V"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="O4u-Zr-lgb"/>
+                                        <exclude reference="sxx-RR-H4U"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="wr4-CJ-d3V"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="O4u-Zr-lgb"/>
+                                        <include reference="sxx-RR-H4U"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1W-X8-ycF" userLabel="CardContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -32,7 +70,6 @@
                                         <color key="backgroundColor" red="0.10438960435468425" green="0.67729353396633463" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.48234779895257629" green="0.80101335938488982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="gG4-ht-VcY" firstAttribute="width" secondItem="rEp-Id-2yr" secondAttribute="width" id="1Pk-tH-1Vb"/>
                                     <constraint firstItem="gG4-ht-VcY" firstAttribute="height" secondItem="rEp-Id-2yr" secondAttribute="height" id="2ka-yj-Kqt"/>
@@ -84,12 +121,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YEq-BR-cLs" secondAttribute="bottom" id="2QZ-jS-2vr"/>
+                            <constraint firstAttribute="trailing" secondItem="mGB-jX-Mit" secondAttribute="trailing" id="BRK-2U-lYu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YEq-BR-cLs" secondAttribute="trailing" id="I2z-yt-Bba"/>
+                            <constraint firstItem="mGB-jX-Mit" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="SQf-ng-0dy"/>
                             <constraint firstAttribute="centerX" secondItem="E1W-X8-ycF" secondAttribute="centerX" id="Uns-lL-0n8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mGB-jX-Mit" secondAttribute="bottom" id="aG0-Qy-xrt"/>
+                            <constraint firstItem="mGB-jX-Mit" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gDY-5x-Hwg"/>
+                            <constraint firstItem="YEq-BR-cLs" firstAttribute="top" secondItem="E1W-X8-ycF" secondAttribute="bottom" id="gby-wp-8cU"/>
+                            <constraint firstItem="YEq-BR-cLs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lVR-QF-aAJ"/>
                             <constraint firstAttribute="centerY" secondItem="E1W-X8-ycF" secondAttribute="centerY" id="zyh-Fh-Ry4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="mGB-jX-Mit"/>
+                                <exclude reference="YEq-BR-cLs"/>
                                 <exclude reference="E1W-X8-ycF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2QZ-jS-2vr"/>
+                                <exclude reference="aG0-Qy-xrt"/>
+                                <exclude reference="BRK-2U-lYu"/>
+                                <exclude reference="SQf-ng-0dy"/>
+                                <exclude reference="gDY-5x-Hwg"/>
+                                <exclude reference="I2z-yt-Bba"/>
+                                <exclude reference="gby-wp-8cU"/>
+                                <exclude reference="lVR-QF-aAJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -103,17 +160,28 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="mGB-jX-Mit"/>
+                                <include reference="YEq-BR-cLs"/>
                                 <include reference="E1W-X8-ycF"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="2QZ-jS-2vr"/>
+                                <include reference="aG0-Qy-xrt"/>
+                                <include reference="BRK-2U-lYu"/>
+                                <include reference="SQf-ng-0dy"/>
+                                <include reference="gDY-5x-Hwg"/>
                                 <include reference="Uns-lL-0n8"/>
                                 <include reference="zyh-Fh-Ry4"/>
+                                <include reference="I2z-yt-Bba"/>
+                                <include reference="gby-wp-8cU"/>
+                                <include reference="lVR-QF-aAJ"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="222" y="290"/>
         </scene>
     </scenes>
 </document>
