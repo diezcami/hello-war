@@ -18,46 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-BR-cLs" userLabel="PlayButtonContainer">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-CJ-d3V">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Play Round">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playRoundTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dti-Xl-wqa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="wr4-CJ-d3V" secondAttribute="centerY" id="O4u-Zr-lgb"/>
-                                    <constraint firstAttribute="centerX" secondItem="wr4-CJ-d3V" secondAttribute="centerX" id="sxx-RR-H4U"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="wr4-CJ-d3V"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="O4u-Zr-lgb"/>
-                                        <exclude reference="sxx-RR-H4U"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="wr4-CJ-d3V"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="O4u-Zr-lgb"/>
-                                        <include reference="sxx-RR-H4U"/>
-                                    </mask>
-                                </variation>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-jX-Mit" userLabel="BackgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1W-X8-ycF" userLabel="CardContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-Id-2yr" userLabel="FirstCardImage">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-Id-2yr" userLabel="FirstCardImage">
                                         <rect key="frame" x="66" y="56" width="120" height="170"/>
                                         <color key="backgroundColor" red="1" green="0.21903949052909488" blue="0.4082397894307086" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -65,7 +32,7 @@
                                             <constraint firstAttribute="width" constant="120" id="wtu-rg-7EW"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gG4-ht-VcY" userLabel="SecondCardImage">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="gG4-ht-VcY" userLabel="SecondCardImage">
                                         <rect key="frame" x="66" y="56" width="120" height="170"/>
                                         <color key="backgroundColor" red="0.10438960435468425" green="0.67729353396633463" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -102,9 +69,42 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-jX-Mit" userLabel="BackgroundImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-BR-cLs" userLabel="PlayButtonContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-CJ-d3V">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Play Round">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playRoundTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dti-Xl-wqa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="wr4-CJ-d3V" secondAttribute="centerY" id="O4u-Zr-lgb"/>
+                                    <constraint firstAttribute="centerX" secondItem="wr4-CJ-d3V" secondAttribute="centerX" id="sxx-RR-H4U"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="wr4-CJ-d3V"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="O4u-Zr-lgb"/>
+                                        <exclude reference="sxx-RR-H4U"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="wr4-CJ-d3V"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="O4u-Zr-lgb"/>
+                                        <include reference="sxx-RR-H4U"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -121,9 +121,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="YEq-BR-cLs"/>
-                                <exclude reference="E1W-X8-ycF"/>
                                 <exclude reference="mGB-jX-Mit"/>
+                                <exclude reference="E1W-X8-ycF"/>
+                                <exclude reference="YEq-BR-cLs"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2QZ-jS-2vr"/>
@@ -144,9 +144,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="YEq-BR-cLs"/>
-                                <include reference="E1W-X8-ycF"/>
                                 <include reference="mGB-jX-Mit"/>
+                                <include reference="E1W-X8-ycF"/>
+                                <include reference="YEq-BR-cLs"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2QZ-jS-2vr"/>
@@ -174,4 +174,8 @@
             <point key="canvasLocation" x="222" y="290"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="667" height="622"/>
+    </resources>
 </document>

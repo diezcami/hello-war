@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondCardImageView: UIImageView!
     @IBOutlet weak var playRoundButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    var cardNamesArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playRoundTapped(sender: UIButton) {
-        playRoundButton.setTitle("JK", forState: UIControlState.Normal)
+        var firstRandomNumber = Int(arc4random_uniform(13))
+        var secondRandomNumber = Int(arc4random_uniform(13))
+        
+        // Displays card images
+        self.firstCardImageView.image = UIImage(named: cardNamesArray[firstRandomNumber])
+        self.secondCardImageView.image = UIImage(named: cardNamesArray[secondRandomNumber])
     }
 
 }
