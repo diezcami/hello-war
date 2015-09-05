@@ -18,9 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-jX-Mit" userLabel="BackgroundImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-BR-cLs" userLabel="PlayButtonContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -118,6 +115,9 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-jX-Mit" userLabel="BackgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -134,9 +134,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="mGB-jX-Mit"/>
                                 <exclude reference="YEq-BR-cLs"/>
                                 <exclude reference="E1W-X8-ycF"/>
+                                <exclude reference="mGB-jX-Mit"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2QZ-jS-2vr"/>
@@ -160,9 +160,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="mGB-jX-Mit"/>
                                 <include reference="YEq-BR-cLs"/>
                                 <include reference="E1W-X8-ycF"/>
+                                <include reference="mGB-jX-Mit"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2QZ-jS-2vr"/>
@@ -178,6 +178,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="mGB-jX-Mit" id="WdG-jP-tXj"/>
+                        <outlet property="firstCardImageView" destination="rEp-Id-2yr" id="6nf-JQ-vmV"/>
+                        <outlet property="playRoundButton" destination="wr4-CJ-d3V" id="Wi3-xS-V3Z"/>
+                        <outlet property="secondCardImageView" destination="gG4-ht-VcY" id="L5e-ad-aQK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

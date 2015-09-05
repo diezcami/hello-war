@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    let lol = "hello"
-    var fish = 36
+    
+    @IBOutlet weak var firstCardImageView: UIImageView!
+    @IBOutlet weak var secondCardImageView: UIImageView!
+    @IBOutlet weak var playRoundButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
