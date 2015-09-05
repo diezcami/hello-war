@@ -34,6 +34,14 @@ class ViewController: UIViewController {
         // Displays card images
         self.firstCardImageView.image = UIImage(named: cardNamesArray[firstRandomNumber])
         self.secondCardImageView.image = UIImage(named: cardNamesArray[secondRandomNumber])
+        
+        if firstRandomNumber > secondRandomNumber {
+            // TODO: First Card is Larger
+        } else if firstRandomNumber == secondRandomNumber{
+            // TODO: Tie
+        } else {
+            // TODO: Second Card is Larger
+        }
     }
 
 }
