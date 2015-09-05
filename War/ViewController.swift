@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondCardImageView: UIImageView!
     @IBOutlet weak var playRoundButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var playerScore: UILabel!
+    @IBOutlet weak var enemyScore: UILabel!
+    
+    var playerScoreTotal = 0
+    var enemyScoreTotal = 0
+    
     var cardNamesArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13"]
     
     override func viewDidLoad() {
@@ -32,15 +38,19 @@ class ViewController: UIViewController {
         var secondRandomNumber = Int(arc4random_uniform(13))
         
         // Displays card images
-        self.firstCardImageView.image = UIImage(named: cardNamesArray[firstRandomNumber])
-        self.secondCardImageView.image = UIImage(named: cardNamesArray[secondRandomNumber])
+        self.firstCardImageView.image = UIImage(named: self.cardNamesArray[firstRandomNumber])
+        self.secondCardImageView.image = UIImage(named: self.cardNamesArray[secondRandomNumber])
+        
+        
         
         if firstRandomNumber > secondRandomNumber {
-            // TODO: First Card is Larger
+            playerScoreTotal += 1
+            self.playerScore.text = String(self.playerScoreTotal)
         } else if firstRandomNumber == secondRandomNumber{
-            // TODO: Tie
+            // nothing
         } else {
-            // TODO: Second Card is Larger
+            enemyScoreTotal += 1
+            self.enemyScore.text = String(self.enemyScoreTotal)
         }
     }
 
